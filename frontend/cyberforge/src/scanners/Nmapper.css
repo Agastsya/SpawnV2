@@ -1,0 +1,53 @@
+.main-box{
+    background-color: #FFEAD3;
+    height: 100vh;
+     font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    font-style: normal;
+};
+.scanner.title{
+    display: flex;
+    justify-content: center;
+    width: 100wh;
+}
+.scanner-description{
+    font-size:20px;
+}
+.scanner-form{
+    text-align: center;
+    
+}
+.scanner-input{
+    height: 5vh;
+    width: 30vw;
+    padding: 10px;
+}
+
+.scanner-label{
+    padding-right: 2vw;
+}
+.scanner-button{
+    height: 5vh;
+    margin-left: 1vw;
+    border-width: 2px;
+    border-radius: 5px;
+    background-color: #D25353;
+    width: 10vw;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
+
+}
+.terminal{
+    width: 100vw;
+    justify-items: center;
+    font-size: 10px;
+    color: green;
+}
+.terminal-response{
+    width: 50vw;
+    background-color: black;
+    margin-top: 5vh;
+    padding: 10px;
+    border-radius: 5px;
+}
