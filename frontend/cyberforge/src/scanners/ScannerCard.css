@@ -1,0 +1,55 @@
+.scanner-card{
+display: flex;
+margin: 2vw;
+background-color: white;
+height: 25vh;
+width: 25vw;
+border-radius: 5px;
+
+}
+.card-photo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+
+}
+.scanner-card{
+    gap: 2vw;
+    background-color: #E37A7A;
+
+}
+.card-text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.card-title{
+    display: flex;
+    justify-content: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+    font-style: normal;
+    color: white;
+    font-size: larger;
+
+}
+a{
+    text-decoration: none;
+}
+.card-desc{
+    display: flex;
+    padding-top: 1vh;
+    padding: 10px;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    font-style: normal;
+}
+.img{
+    height: 100px;
+}

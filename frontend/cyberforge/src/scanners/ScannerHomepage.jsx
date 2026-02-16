@@ -1,33 +1,30 @@
+import ScannerCard from './ScannerCard'
 import './ScannerHomepage.css'
 
 function ScannerHomepage(){
     return(
         <>
         <div className='scanner-box'>
-            <a href="/nmap">
-            <div className='scanner-card'>
-               <div className='card-photo'>
-                <img className='img' src="/images/eye.png" alt="" srcset="" />
-               </div>
-               <div className='card-text'>
-                 <div className='card-title'>
-                    Network Mapper (Nmap)
-                </div>
-                <div className='card-desc'>
-                    Nmap is a powerful network scanner for discovering hosts, open ports, and security issues.
-                </div>
-               </div>
+            <ScannerCard
+            href="/nmap"
+            name="Network Mapper"
+            description="Nmap Scanner is a powerful network scanning tool used to discover open ports, running services, and potential security vulnerabilities on target systems."
+            src ="/images/eye.png"
+            />
+            <ScannerCard
+            href="/ffuf"
+            name="Fuzz Faster U Fool"
+            description="FFUF is a fast web fuzzing tool used to discover hidden directories, files, parameters, subdomains, and endpoints by brute-forcing HTTP requests."
+            src="/images/ffuf.png"
+            />
+            <ScannerCard
+            href="/nikto"
+            name="Nikto Web Scanner"
+            description="Nikto is an open-source web server scanner that detects dangerous files, outdated server software, misconfigurations, and known web vulnerabilities."
+            src="/images/nikto.png"
+            />
 
-            </div></a>
-            <div className='scanner-card'>
-                ffuf
-            </div>
-            <div className='scanner-card'>
-                Nikto
-            </div>
-            <div className='scanner-card'>
-                Naabu
-            </div>
+
         </div>
         </>
     )
