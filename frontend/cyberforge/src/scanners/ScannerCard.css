@@ -5,7 +5,9 @@ background-color: white;
 height: 25vh;
 width: 25vw;
 border-radius: 5px;
-
+}
+.card-title:hover,.card-desc:hover{
+    color: black;
 }
 .card-photo{
     display: flex;

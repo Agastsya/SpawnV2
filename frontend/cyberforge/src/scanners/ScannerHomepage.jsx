@@ -23,6 +23,12 @@ function ScannerHomepage(){
             description="Nikto is an open-source web server scanner that detects dangerous files, outdated server software, misconfigurations, and known web vulnerabilities."
             src="/images/nikto.png"
             />
+            <ScannerCard
+            href="/whatweb"
+            name="What Web"
+            description="Identifies technologies, frameworks, and software running on websites using fingerprinting techniques for security analysis and reconnaissance purposes."
+            src="/images/cyber.png"
+            />
 
 
         </div>

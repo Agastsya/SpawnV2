@@ -10,7 +10,6 @@ function Nmapper(){
     e.preventDefault();
     const res = await axios.post('http://134.209.150.218:3333/nmap',{ip});
     setResponse(res.data);
-    
   }
 
 
