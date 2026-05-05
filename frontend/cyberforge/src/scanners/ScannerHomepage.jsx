@@ -1,5 +1,15 @@
 import ScannerCard from './ScannerCard'
 import './ScannerHomepage.css'
+import {
+    FiActivity,
+    FiSearch,
+    FiGlobe,
+    FiCompass,
+    FiZap,
+    FiCrosshair,
+    FiUser,
+    FiAlertTriangle
+} from 'react-icons/fi'
 
 function ScannerHomepage(){
     return(
@@ -60,7 +70,6 @@ function ScannerHomepage(){
             src="/images/subfinder.png"
             />
         </div>
-        </>
     )
 }
 

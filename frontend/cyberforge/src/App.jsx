@@ -2,6 +2,7 @@ import './App.css'
 import Nmapper from './scanners/Nmapper';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './Header';
+import Footer from './Footer';
 import ScannerHomepage from './scanners/ScannerHomepage';
 import Whatweb from './scanners/WhatWeb/Whatweb'
 import Ffuf from './scanners/Ffuf/Ffuf';

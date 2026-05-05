@@ -1,66 +1,265 @@
-.main-box{
-    background-color: #FFEAD3;
-    height: 100vh;
-     font-family: "Bebas Neue", sans-serif;
-    font-weight: 600;
-    font-size: 30px;
-    font-style: normal;
-};
-.scanner.title{
+/* Shared scanner tool theme — used by Nmapper, Ffuf, Whatweb, ScannerTool */
+.main-box {
+    min-height: calc(100vh - 68px);
+    padding: 56px 56px 96px;
+    max-width: 1100px;
+    margin: 0 auto;
+    color: #0c1224;
+    font-family: "Inter", sans-serif;
+    position: relative;
+}
+
+.main-box::before {
+    content: "";
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 360px;
+    background: radial-gradient(circle, rgba(79, 125, 243, 0.1) 0%, transparent 70%);
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.scanner-form {
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    background: #ffffff;
+    border: 1px solid #e2e7f3;
+    border-radius: 16px;
+    padding: 36px 40px;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 12px rgba(12, 18, 36, 0.06);
+}
+
+.scanner-title {
+    font-family: "Inter", sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    color: #0c1224;
+    margin: 0 0 10px;
+    display: block;
+    width: auto;
+}
+
+.scanner-description {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #5b6478;
+    line-height: 1.6;
+    margin: 0 0 28px;
+    text-align: left;
+    max-width: 720px;
+}
+
+.inner-box {
     display: flex;
-    justify-content: center;
-    width: 100wh;
-}
-.scanner-description{
-    font-size:20px;
-}
-.scanner-form{
-    text-align: center;
-    
-}
-.scanner-input{
-    height: 5vh;
-    width: 30vw;
-    padding: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 0;
+    padding: 18px;
+    background: #f5f7fc;
+    border: 1px solid #e2e7f3;
+    border-radius: 12px;
 }
 
-.scanner-label{
-    padding-right: 2vw;
+.scanner-label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #2750b8;
+    padding-right: 0;
 }
-.scanner-button{
-    height: 5vh;
-    margin-left: 1vw;
-    border-width: 2px;
-    border-radius: 5px;
-    background-color: #D25353;
-    width: 10vw;
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 20px;
 
+.scanner-input {
+    flex: 1;
+    min-width: 240px;
+    height: auto;
+    width: auto;
+    padding: 12px 14px;
+    background-color: #ffffff;
+    border: 1px solid #d8def0;
+    border-radius: 8px;
+    color: #0c1224;
+    font-family: "JetBrains Mono", "Menlo", monospace;
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
 }
-.terminal{
-    width: 100vw;
-    justify-items: center;
-    font-size: 10px;
-    color: green;
+
+.scanner-input::placeholder {
+    color: #94a0b8;
 }
-.terminal-response{
-    width: 50vw;
-    background-color: black;
-    margin-top: 5vh;
-    padding: 10px;
-    border-radius: 5px;
+
+.scanner-input:focus {
+    outline: none;
+    border-color: #4f7df3;
+    box-shadow: 0 0 0 3px rgba(79, 125, 243, 0.12);
 }
+
+/* Hacker-flavored action button */
+.scanner-button {
+    position: relative;
+    height: auto;
+    width: auto;
+    margin-left: 0;
+    padding: 12px 22px 11px;
+    border: 1px solid #4f7df3;
+    border-radius: 6px;
+    background:
+        linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 50%),
+        #1a3a8a;
+    color: #d8e4ff;
+    font-family: "JetBrains Mono", "Menlo", monospace;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.08s ease, background-color 0.15s, color 0.15s, box-shadow 0.15s, border-color 0.15s;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.18),
+        inset 0 -2px 0 rgba(0, 0, 0, 0.35),
+        0 2px 0 #0a1c4a,
+        0 6px 18px rgba(79, 125, 243, 0.25);
+}
+
+.scanner-button::before { content: "["; margin-right: 8px; color: #6ea8ff; opacity: 0.6; transition: opacity 0.15s, transform 0.15s; }
+.scanner-button::after  { content: "]"; margin-left: 8px;  color: #6ea8ff; opacity: 0.6; transition: opacity 0.15s, transform 0.15s; }
+
+.scanner-button:hover:not(:disabled) {
+    color: #ffffff;
+    border-color: #6ea8ff;
+    background:
+        linear-gradient(180deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0) 50%),
+        #2750b8;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.25),
+        inset 0 -2px 0 rgba(0, 0, 0, 0.35),
+        0 2px 0 #0a1c4a,
+        0 8px 24px rgba(79, 125, 243, 0.4);
+}
+
+.scanner-button:hover:not(:disabled)::before { opacity: 1; transform: translateX(-2px); }
+.scanner-button:hover:not(:disabled)::after  { opacity: 1; transform: translateX(2px); }
+
+.scanner-button:active:not(:disabled) {
+    transform: translateY(2px);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 2px 6px rgba(0, 0, 0, 0.3),
+        0 0 0 #0a1c4a,
+        0 2px 8px rgba(79, 125, 243, 0.2);
+}
+
+.scanner-button:focus-visible {
+    outline: none;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.18),
+        inset 0 -2px 0 rgba(0, 0, 0, 0.35),
+        0 2px 0 #0a1c4a,
+        0 0 0 3px rgba(79, 125, 243, 0.35);
+}
+
 .scanner-button:disabled {
-    background-color: #888;
+    border-color: #c8d6ff;
+    background: #e8eeff;
+    color: #7a95d8;
     cursor: not-allowed;
-    opacity: 0.6;
+    box-shadow: none;
 }
+
+.scanner-button:disabled::before,
+.scanner-button:disabled::after { color: #7a95d8; opacity: 0.5; }
+
+/* OUTPUT TERMINAL */
+.terminal {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #0d1126;
+    border: 1px solid #1e2a45;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(12, 18, 36, 0.15);
+    font-family: "JetBrains Mono", "Menlo", "Consolas", monospace;
+    font-size: 13px;
+    line-height: 1.65;
+    color: #c8d4ff;
+}
+
+.terminal::before {
+    content: "● ● ●   SCAN OUTPUT";
+    display: block;
+    padding: 12px 20px;
+    background: linear-gradient(180deg, #11162e 0%, #0b1024 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    color: #6ea8ff;
+}
+
+.terminal-response {
+    width: 100%;
+    margin: 0;
+    padding: 24px;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+    color: #c8d4ff;
+    font-family: "JetBrains Mono", "Menlo", "Consolas", monospace;
+    font-size: 13px;
+    line-height: 1.7;
+    max-height: 70vh;
+}
+
+.terminal-response::-webkit-scrollbar { width: 8px; height: 8px; }
+.terminal-response::-webkit-scrollbar-track { background: transparent; }
+.terminal-response::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.08); border-radius: 4px; }
+.terminal-response::-webkit-scrollbar-thumb:hover { background: rgba(79, 125, 243, 0.4); }
+
 .loading-text {
-    color: #00ff00;
-    animation: pulse 1s ease-in-out infinite;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #6ee7a8;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+    animation: pulse 1.4s ease-in-out infinite;
 }
+
+.loading-text::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #6ee7a8;
+    box-shadow: 0 0 12px rgba(110, 231, 168, 0.7);
+}
+
 @keyframes pulse {
     0%, 100% { opacity: 1; }
-    50% { opacity: 0.2; }
+    50% { opacity: 0.35; }
+}
+
+@media (max-width: 640px) {
+    .main-box { padding: 32px 20px 64px; }
+    .scanner-form { padding: 24px 20px; }
+    .scanner-title { font-size: 26px; }
+    .inner-box { flex-direction: column; align-items: stretch; }
+    .scanner-button { width: 100%; }
 }
