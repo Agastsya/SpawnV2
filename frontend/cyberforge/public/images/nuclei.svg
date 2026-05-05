@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <rect width="400" height="400" fill="#0a0a0a"/>
+  <rect x="1" y="1" width="398" height="398" fill="none" stroke="#D25353" stroke-width="2"/>
+
+  <!-- Atom orbits -->
+  <ellipse cx="200" cy="185" rx="110" ry="45" fill="none" stroke="#D25353" stroke-width="2" opacity="0.8"/>
+  <ellipse cx="200" cy="185" rx="110" ry="45" fill="none" stroke="#D25353" stroke-width="2" opacity="0.8" transform="rotate(60 200 185)"/>
+  <ellipse cx="200" cy="185" rx="110" ry="45" fill="none" stroke="#D25353" stroke-width="2" opacity="0.8" transform="rotate(120 200 185)"/>
+
+  <!-- Nucleus -->
+  <circle cx="200" cy="185" r="22" fill="#D25353" opacity="0.9"/>
+  <circle cx="200" cy="185" r="14" fill="#0a0a0a"/>
+  <circle cx="200" cy="185" r="6" fill="#FFEAD3"/>
+
+  <!-- Electrons -->
+  <circle cx="310" cy="185" r="7" fill="#FFEAD3"/>
+  <circle cx="145" cy="90" r="7" fill="#FFEAD3" transform="rotate(60 200 185)"/>
+  <circle cx="145" cy="90" r="7" fill="#FFEAD3" transform="rotate(120 200 185)"/>
+
+  <!-- Bug/vulnerability markers -->
+  <text x="155" y="255" fill="#D25353" font-family="monospace" font-size="11" opacity="0.8">CVE-2024-xxxx</text>
+  <text x="165" y="270" fill="#D25353" font-family="monospace" font-size="11" opacity="0.6">CRITICAL</text>
+
+  <!-- Label -->
+  <text x="200" y="330" text-anchor="middle" fill="#FFEAD3" font-family="monospace" font-size="28" font-weight="bold" letter-spacing="4">Nuclei</text>
+  <text x="200" y="355" text-anchor="middle" fill="#D25353" font-family="monospace" font-size="13" letter-spacing="2">VULN SCANNER</text>
+</svg>

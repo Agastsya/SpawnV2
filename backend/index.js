@@ -41,9 +41,9 @@ app.post("/ffuf",(req,res)=>{
 app.post("/subfinder", (req, res) => {
     console.log("body received:", req.body);
     const { ip } = req.body;
-    exec(`subfinder -d ${ip} -o /Users/agastsya/result -oJ`, (err, stdout) => {
+    exec(`subfinder -d ${ip} -o /Users/agastsya/result_subfinder -oJ`, (err, stdout) => {
         if (err) return res.send(err.message);
-        res.sendFile("/Users/agastsya/result");
+        res.sendFile("/Users/agastsya/result_subfinder");
     });
 });
 
