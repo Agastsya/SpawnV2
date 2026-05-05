@@ -1,34 +1,61 @@
-.header-b,.header{
+.header {
     display: flex;
-    gap: 100px;
     justify-content: space-between;
-    background-color: #D25353;
-    color: white;
-    height: 8vh;
     align-items: center;
-    padding: 2vw;
+    padding: 0 56px;
+    height: 68px;
+    background-color: rgba(10, 13, 30, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(79, 125, 243, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 600;
-    font-size: 30px;
-    font-style: normal;
-    
-}
-.header-a{
-    font-size:40px
+.header-a {
+    font-family: "Inter", sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #6ea8ff 0%, #4f7df3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-.header-b{
-    list-style:none;
+.header-ab {
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: #6b7693;
+    padding-left: 10px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
 }
-.header-ab{
-    font-size: 18px;
-    padding-left: 5px;
+
+.header-b {
+    display: flex;
+    list-style: none;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
 }
-.header-button{
-    color: white;
+
+.header-button {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #c5cce0;
     text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: color 0.2s, background-color 0.2s;
+    letter-spacing: 0.2px;
 }
-.header-button:hover{
-    color: bisque;
+
+.header-button:hover {
+    color: #ffffff;
+    background-color: rgba(79, 125, 243, 0.12);
 }
